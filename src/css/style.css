@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --LightGrayishBlue: hsl(234, 39%, 85%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url('../images/bg-mobile-light.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--LightGrayishBlue);
+  
+}
+
+#root {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* App component styling begins*/
+
+h1 {
+  text-transform: uppercase;
+}
+
+.todo-container {
+  margin: 0 auto;  
+}
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2em;
+}
+
+.todo-div {
+  margin: 0 auto;
+}
+
+.form-input {
+  width: 100%;
+  height: 3.5em;
+  border-radius: 5px;
+  border: none;
+  padding-left: 55px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+}
+
+/* App component styling ends*/
+
+/* Tasks component styling begins */
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-done{
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--LightGrayishBlue);
+}
+
+.task-list-item {
+  position: relative;
+  padding: 15px 0;
+  text-align: left;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: .5em;
+  border-radius: 5px;
+}
+
+.delete-task {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Tasks component styling ends */
+
+@media (min-width: 380px) {
+  body {
+    background-image: url('../images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-color: var(--LightGrayishBlue);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .todo-list-container {
+    margin: 0;
+  }
+
+  .todo-container {
+    margin: 0 auto;
+    max-width: 550px;
+  }
+
+}
